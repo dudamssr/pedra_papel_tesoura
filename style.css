@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #F7EEED;
+}
+
+.introducao {
+    margin-top: 40px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    border: solid 2px #FAE6E7;
+    height: 200px;
+}
+
+.introducao img {
+    padding: 20px;
+    width: 30%;
+    min-width: 150px;
+}
+
+.placar {
+    background-color: #F4BBC9;
+    width: 200px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score {
+    color: #F191AC;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.pontuacao {
+    font-size: 50px;
+    font-weight: bold;
+    color: #F7EEED;
+}
+
+
+.jogo {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    margin-top: 170px;
+    width: 100%;
+    max-width: 850px;
+    height: 650px;
+}
+
+.hexagono {
+    width: 55%;
+    opacity: 0.3;
+    margin-top: 40px;
+}
+
+.opcao {
+    padding: 20px;
+    background-color: #FAE6E7;
+    border-radius: 50%;
+    border: 25px solid #F191AC;
+    width: 180px;
+    height: 180px;
+    animation: rotatez 1s linear;
+    transition: 0.5s;
+}
+
+.opcao:hover {
+    animation: luzdeFundo 2s ease infinite;
+    cursor: pointer;
+}
+
+.opcao img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.opcao:hover img {
+    transform: rotateY(360deg);
+}
+
+.papel,
+.tesoura,
+.pedra,
+.lagarto,
+.spock {
+    border-color: #F4BBC9;
+    box-shadow:
+        0px 7px 0px #FAE6E7,
+        inset 0px 7px #FAE6E7;
+}
+
+.conteiner-papel {
+    position: absolute;
+    top: -10px;
+    left: 120px;
+}
+
+.conteiner-tesoura {
+    position: absolute;
+    top: -10px;
+    right: 120px;
+}
+
+.conteiner-pedra {
+    position: absolute;
+    bottom: 80px;
+    right: 160px;
+}
+
+.conteiner-lagarto {
+    position: absolute;
+    bottom: 80px;
+    left: 160px;
+}
+
+.conteiner-spock {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gameplay {
+    display: none;
+    width: 100%;
+    max-width: 900px;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    z-index: -1;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.display h2 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #F191AC;
+    width: 200px;
+    text-align: center;
+}
+
+.test,
+.test1 {
+    border-radius: 50%;
+}
+
+.result {
+    font-size: 45px;
+    color: #F191AC;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.fim {
+    margin: 20px;
+    display: none;
+    animation: opacidade 2s linear;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.playAgain {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    color: #F191AC;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    background-color: #FAE6E7;
+    transition: 0.5s;
+}
+
+.playAgain:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.regras {
+    width: 500px;
+    height: 500px;
+    background-color: #F7EEED;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 120px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    box-shadow: 0 0 0 3000px #F4BBC9;
+    z-index: 2;
+}
+
+.regras img {
+    width: 100%;
+}
+
+.regras-titulo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.regras-titulo h1 {
+    color: #F191AC;
+}
+
+.regras-titulo button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.regras-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #FAE6E7;
+    border: 2px solid white;
+    font-size: 15px;
+    color: #F4BBC9;
+    transition: linear 0.5s;
+}
+
+.regras-button:hover {
+    background-color: #F4BBC9;
+    color: white;
+    cursor: pointer;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes opacidade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotatez {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes luzdeFundo {
+
+    0% {
+        box-shadow: 0px 0px 0px 0px #F191AC;
+    }
+
+    50% {
+        box-shadow: 0px 0px 70px 10px #F191AC;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 0px #F191AC;
+    }
+}
